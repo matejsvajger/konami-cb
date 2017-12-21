@@ -9,7 +9,7 @@ var konami = function (cb) {
 
   var pos = 0
 
-  const check = () => (length == pos) ? fire() : reset()
+  const check = () => (length == pos) ? fire() : null
 
   const fire = () => {
     cb()
@@ -20,7 +20,7 @@ var konami = function (cb) {
     pos = 0
   }
 
-  document.addEventListener('keydown', ({ keyCode }) => (keyCode === code[pos++]) ? check() : null, false)
+  document.addEventListener('keydown', ({ keyCode }) => (keyCode === code[pos++]) ? check() : reset(), false)
 
 }
 
