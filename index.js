@@ -20,7 +20,7 @@ var konami = function (cb) {
     pos = 0
   }
 
-  document.addEventListener('keydown', ({ keyCode }) => (keyCode === kode[pos++]) ? check() : null, false)
+  document.addEventListener('keydown', ({ keyCode }) => (keyCode === code[pos++]) ? check() : null, false)
 
 }
 
